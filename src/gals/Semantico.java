@@ -1,10 +1,14 @@
 package gals;
 import CompiladorIDE.MySets;
+import java.util.List;
 
 public class Semantico implements Constants
 {
+    Simbolo simbolo;
+    List<Simbolo> simbolos ;
     public void executeAction(int action, Token token)	throws SemanticError
     {
+        
         String lexeme = token.getLexeme();
         String tipo="";
         switch (action){
